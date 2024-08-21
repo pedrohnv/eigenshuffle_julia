@@ -91,8 +91,8 @@ function eigenshuffle(Asequence, Bsequence=nothing)
     end
     
     # the initial eigenvalues/vectors in nominal order
-    Vseq = zeros(p,p,n)
-    Dseq = zeros(p,n)
+    Vseq = zeros(ComplexF64, p,p,n)
+    Dseq = zeros(ComplexF64, p,n)
     for i = 1:n
         if genflag
             D, V = eigen(Asequence[:,:,i], Bsequence[:,:,i])
